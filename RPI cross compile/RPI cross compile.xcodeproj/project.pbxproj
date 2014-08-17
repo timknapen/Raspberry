@@ -1,0 +1,162 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		222F2449199EC08700F30532 /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		222F244A199EC08700F30532 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		222F244C199EC08700F30532 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		222F244D199EC08700F30532 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		222F2443199EC08600F30532 = {
+			isa = PBXGroup;
+			children = (
+				222F244C199EC08700F30532 /* main.cpp */,
+				222F244A199EC08700F30532 /* App.h */,
+				222F2449199EC08700F30532 /* App.cpp */,
+				222F244D199EC08700F30532 /* Makefile */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		222F2448199EC08700F30532 /* build */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = all;
+			buildConfigurationList = 222F244E199EC08700F30532 /* Build configuration list for PBXLegacyTarget "build" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = build;
+			passBuildSettingsInEnvironment = 0;
+			productName = backup;
+		};
+		2260553A19A0C64100D4C89A /* clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = clean;
+			buildConfigurationList = 2260553B19A0C64100D4C89A /* Build configuration list for PBXLegacyTarget "clean" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = clean;
+			passBuildSettingsInEnvironment = 0;
+			productName = clean;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		222F2444199EC08700F30532 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 222F2447199EC08700F30532 /* Build configuration list for PBXProject "RPI cross compile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 222F2443199EC08600F30532;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				222F2448199EC08700F30532 /* build */,
+				2260553A19A0C64100D4C89A /* clean */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		222F2445199EC08700F30532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		222F2446199EC08700F30532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Release;
+		};
+		222F244F199EC08700F30532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+			};
+			name = Debug;
+		};
+		222F2450199EC08700F30532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+			};
+			name = Release;
+		};
+		2260553C19A0C64100D4C89A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2260553D19A0C64100D4C89A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		222F2447199EC08700F30532 /* Build configuration list for PBXProject "RPI cross compile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222F2445199EC08700F30532 /* Debug */,
+				222F2446199EC08700F30532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222F244E199EC08700F30532 /* Build configuration list for PBXLegacyTarget "build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222F244F199EC08700F30532 /* Debug */,
+				222F2450199EC08700F30532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2260553B19A0C64100D4C89A /* Build configuration list for PBXLegacyTarget "clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2260553C19A0C64100D4C89A /* Debug */,
+				2260553D19A0C64100D4C89A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 222F2444199EC08700F30532 /* Project object */;
+}
