@@ -90,10 +90,16 @@ I had to fix these:
 	usr/lib/arm-linux-gnueabihf/libpthread.so
 	usr/lib/arm-linux-gnueabihf/libc.so
 	usr/lib/arm-linux-gnueabihf/libz.so
-	usr/lib/arm-linux-gnueabihf//libm.so
-	usr/lib/arm-linux-gnueabihf//libglib-2.0.so
+	usr/lib/arm-linux-gnueabihf/libm.so
+	usr/lib/arm-linux-gnueabihf/libglib-2.0.so
 	usr/lib/arm-linux-gnueabihf/libpng12.so
 	usr/lib/arm-linux-gnueabihf/libdl.so
+	usr/lib/arm-linux-gnueabihf/libcrypt.so
+	usr/lib/arm-linux-gnueabihf/librt.so
+	usr/lib/arm-linux-gnueabihf/libthread_db.so
+	usr/lib/arm-linux-gnueabihf/libusb-1.0.so
+	usr/lib/arm-linux-gnueabihf/libutil.so
+	
 	
 Some of them are files (you can just edit with a text editor), other ones are symlinks that link to an absolute path. 
 
