@@ -99,8 +99,21 @@ I had to fix these:
 	usr/lib/arm-linux-gnueabihf/libthread_db.so
 	usr/lib/arm-linux-gnueabihf/libusb-1.0.so
 	usr/lib/arm-linux-gnueabihf/libutil.so
-	
-	
+	usr/lib/arm-linux-gnueabihf/libBrokenLocale.so
+	usr/lib/arm-linux-gnueabihf/libanl.so
+	usr/lib/arm-linux-gnueabihf/libcidn.so
+	usr/lib/arm-linux-gnueabihf/libdbus-1.so
+	usr/lib/arm-linux-gnueabihf//libexpat.so
+	usr/lib/arm-linux-gnueabihf/libnsl.so
+	usr/lib/arm-linux-gnueabihf/libnss_compat.so
+	usr/lib/arm-linux-gnueabihf/libnss_dns.so
+	usr/lib/arm-linux-gnueabihf/libnss_files.so
+	usr/lib/arm-linux-gnueabihf/libnss_hesiod.so
+	usr/lib/arm-linux-gnueabihf/libnss_nis.so
+	usr/lib/arm-linux-gnueabihf/libnss_nisplus.so
+	usr/lib/arm-linux-gnueabihf/libpcre.so
+	usr/lib/arm-linux-gnueabihf/libresolv.so	
+
 Some of them are files (you can just edit with a text editor), other ones are symlinks that link to an absolute path. 
 
 Find the bad symlinks by typing
@@ -114,8 +127,7 @@ Symlinks with a target starting with `/` are bad since they refer to a path outs
 Delete the bad ones an relink to a correct relative path like this (from inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf`)
 
 	cd /Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf
-	unlink ./libpng12.so
-	ln -s ../../../lib/arm-linux-gnueabihf/libpng12.so.0 ./libpng12.so
+	ln -sf ../../../lib/arm-linux-gnueabihf/libpng12.so.0 ./libpng12.so
 
 
 #### 7 copy the example project and test it
