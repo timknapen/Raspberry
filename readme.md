@@ -80,8 +80,8 @@ When trying to compile, they create annoying, mesmerising and confusing compilat
 	libdl.so.2: could not read symbols: Invalid operation
 
 
-You'll need the absolute paths in those files and the bad symlinks.
-Do not touch the ones on your Pi, only the ones in `/Volumes/xtools`!
+You'll need to correct the absolute paths in those files and the bad symlinks.
+**Do not touch the ones on your Pi, only the ones in `/Volumes/xtools/`!**
 
 I had to fix these:
 	
@@ -124,9 +124,13 @@ Symlinks with a target starting with `/` are bad since they refer to a path outs
 
 	libpng12.so -> /lib/arm-linux-gnueabihf/libpng12.so.0
 
-Delete the bad ones an relink to a correct relative path like this (from inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf`)
+**Probably a better alternative for finding bad symlinks inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf` would be: (untested!)**
 
-	cd /Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf
+	find . -maxdepth 1 -lname '/*' -ls
+
+
+Delete the bad ones an relink to a correct relative path like this ( From inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf` !)
+
 	ln -sf ../../../lib/arm-linux-gnueabihf/libpng12.so.0 ./libpng12.so
 
 
