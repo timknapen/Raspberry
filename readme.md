@@ -26,9 +26,9 @@ You will end up with a dmg containing the full toolchain. When you mount it, you
 Download the latest OF release for linux armv6 Raspberry Pi from the downloads page:
 <http://openframeworks.cc/download/>
 
-(I'm working with OF_v0.8.4 right here <http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz>)
+(I'm working with OF_v0.8.4 right here <http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz> )
 
-And read the getting started instructions to make it work on your RPI
+Follow the getting started instructions:
 <http://openframeworks.cc/setup/raspberrypi/Raspberry-Pi-Getting-Started.html>
 Follow the easy steps on this page and make sure you can compile the "openFrameworksCompiled" project. (This will take a while)
 
@@ -39,7 +39,7 @@ Compile and run at least one of the examples include to make sure you've set up 
 
 Samba allows you to access the Pi from your Mac over the network. For example making the root of the pi accessible from `/Volumes/Pishare` on your Mac...
 
-(TODO! full explanation)
+*(TODO! full explanation)*
 
 #### 4 Copy openframeworks from the Pi to your Mac
 
@@ -81,6 +81,7 @@ When trying to compile, they create annoying, mesmerising and confusing compilat
 
 
 You'll need to correct the absolute paths in those files and the bad symlinks.
+
 **Do not touch the ones on your Pi, only the ones in `/Volumes/xtools/`!**
 
 I had to fix these:
@@ -120,17 +121,16 @@ Find the bad symlinks by typing
 
 	ls -l
 	
-Symlinks with a target starting with `/` are bad since they refer to a path outside of your xtools disk. For example
+Symlinks with a target starting with `/` are bad since they refer to the root path outside of your xtools disk. For example
 
 	libpng12.so -> /lib/arm-linux-gnueabihf/libpng12.so.0
 
-**Probably a better alternative for finding bad symlinks inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf` would be: (untested!)**
+A better way to show only the bad symlinks is:
 
 	find . -maxdepth 1 -lname '/*' -ls
 
 
-Delete the bad ones an relink to a correct relative path like this ( From inside `/Volumes/xtools/arm-none-linux-gnueabi/usr/lib/arm-linux-gnueabihf` !)
-
+Delete the bad ones an relink to a correct relative path like this:
 	ln -sf ../../../lib/arm-linux-gnueabihf/libpng12.so.0 ./libpng12.so
 
 
