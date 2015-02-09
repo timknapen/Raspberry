@@ -10,6 +10,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+// uncomment to compile for Raspberry Pi 2
 #define RASPBERRYPI2
 
 /***********************************************************************
